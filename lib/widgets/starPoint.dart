@@ -1,0 +1,20 @@
+import 'package:flutter/material.dart';
+
+class StarPoint extends StatelessWidget {
+  final Color color;
+  final double size;
+
+  const StarPoint({key, required this.color, required this.size})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedContainer(
+      duration: Duration(milliseconds: 300),
+      width: size,
+      height: size,
+      decoration: BoxDecoration(
+          color: color, borderRadius: BorderRadius.circular(size)),
+    );
+  }
+}
